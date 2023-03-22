@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Bar Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+  
+  <nav class="search-bar">
+    <ul>
+        <li><a class="logo" href="main.html">SL</a></li>
+        <!-- <li><a class="logo">Filter</a></li> -->
+        <li><a class="logo">Menu</a>
+            <ul>
+                <li><a href="file:///Users/tanya/git/tufimtseva/web_airport/lab_1/flight_list.html">Flights</a></li>
+                <li><a href="file:///Users/tanya/git/tufimtseva/web_airport/lab_1/boarding_check_list.html">Boarding checks</a></li>
+                <li><a href="file:///Users/tanya/git/tufimtseva/web_airport/lab_1/user_list.html">Clients</a></li>
+                <li><a href="file:///Users/tanya/git/tufimtseva/web_airport/lab_1/list.html">Managers</a></li>
+              </ul>
+        </li>
+    </ul>
+    
+    <form action="#">
+      <input type="text" placeholder="Search..." size="1">
+      <button class="go-button" type="submit">Go</button>
+    </form>
+    <ul class="login-register">
+        <li><a href="manager_profile.html"><img src="user.svg"></a></li>
+        
+    </ul>
+
+</nav>
+
+  <div class="main">
+    <div class="container-dropdown">
+        <div class="box">
+          <p class="text">Select flight</p>
+          <select class="dropdown">
+            <option value="">Flight number</option>
+            <option value="option1">LA2378</option>
+            <option value="option2">KR9022</option>
+            <option value="option3">AA1223</option>
+            <option value="option4">LW7732</option>
+          </select>
+          <a href="booking_list.html"><i>See all bookings</i></a>
+        </div>
+        <div class="box">
+            <p class="text">Set flight status</p>
+            <select class="dropdown">
+              <option value="">Flight status</option>
+              <option value="option1">Created</option>
+              <option value="option2">Planned</option>
+              <option value="option3">Gate opened</option>
+              <option value="option4">Gate closed</option>
+            </select>
+            <a>Set</a>
+          </div>
+          <div class="box">
+            <div class="select-passenger"> 
+              <p class="text">Select a passenger</p>
+              <input type="text" placeholder="Surname">
+              <input type="text" placeholder="Name">
+              <input type="text" placeholder="Passport number">
+
+            </div>
+            <a href="profile.html"><i>Go to passenger's profile</i></a>
+            <a href="booking.html"><i>See passenger's booking</i></a>
+            <select class="dropdown">
+                <option value="">Check type</option>
+                <option value="option1">Passport check</option>
+                <option value="option2">Baggage check</option>
+                <option value="option3">Security check</option>
+              </select>
+              <div class="buttons">
+                <button class="success">Success</button>
+                <button class="fail">Fail</button>
+              </div>
+
+          </div>
+      </div>      
+  </div>
+  
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="contact-us">
+          <h4>Contact Us</h4>
+          <p>123 Main Street, Anytown USA, (555) 555-5555, <a href="mailto:info@sl.com">info@sl.com</a></p>
+          <!-- <ul>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, Anytown USA</li>
+            <li><i class="fas fa-phone"></i> (555) 555-5555</li>
+            <li><i class="fas fa-envelope"></i> info@sl.com</li>
+          </ul> -->
+        </div>
+        <div class="follow-us">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="#"><i>facebook</i></a></li>
+            <li><a href="#"><i>instagram</i></a></li>
+            <li><a href="#"><i>twitter</i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <p>&copy; 2023 Silver Lining. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+  
+</body>
+
+</html>

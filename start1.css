@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+.main {
+  background-image: url("https://klike.net/uploads/posts/2019-11/1573724735_11.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+h1 {
+  margin: 0;
+  padding-top: 25px;
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+  text-align: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 100%;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  height: 60px;
+  padding: 10px;
+}
+.search-bar form {
+  display: flex;
+  align-items: center;
+}
+.search-bar input[type=text] {
+  padding: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  width: 500px;
+}
+
+.go-button {
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+  padding: 8px;
+  margin: 0 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.go-button:hover {
+  background-color: #333;
+  color: white;
+}
+
+.login-register a {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px;
+  background-color: #333;
+  border-radius: 5px;
+}
+.login-register a:hover {
+  background-color: white;
+  color: #333;
+}
+
+.logo {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+  border: none;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.logo:hover {
+  background-color: white;
+  color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  .search-bar {
+    flex-direction: column;
+    height: auto;
+  }
+  .search-bar input[type=text] {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .login-register {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+  }
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+footer h4 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+footer p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+footer ul li {
+  font-size: 14px;
+}
+footer .contact-us ul li {
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+footer .contact-us ul li i {
+  margin-right: 10px;
+}
+footer .follow-us ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .follow-us ul li {
+  margin-right: 10px;
+}
+footer .follow-us ul li a {
+  color: #fff;
+  transition: all 0.3s ease;
+}
+footer .follow-us ul li a:hover {
+  transform: translateY(-3px);
+}
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+footer .container .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=start1.css.map */
