@@ -152,6 +152,10 @@ html {
 body {
   margin: 0px;
   font-family: Arial, sans-serif;
+  background-color: #f9efdb;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 h2 {
@@ -166,12 +170,15 @@ h2 {
   color: #333;
 }
 
+.flight-list {
+  flex-grow: 1;
+}
 .flight-list table {
   border-collapse: collapse;
   width: 100%;
   margin: 0 auto;
 }
-.flight-list table th, .flight-list table td {
+.flight-list table th, .flight-list table tbody td {
   border-bottom: 1px solid #ddd;
   padding: 8px;
   text-align: center;

@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Search Bar Example</title>
+  <script type="text/javascript" src="booking_list.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="booking_list.css">
 </head>
@@ -30,9 +31,9 @@
     </ul>
 
 </nav>
-    <div class="heading"><h2>Bookings for flight LW3456</h2></div>
+    <div class="heading"><h2 id="booking_header">Bookings for flight LW3456</h2></div>
     <div class="flight-list">
-    <table>
+    <table id="booking_list_table">
       <thead>
         <tr>
           <th>Passenger</th>
@@ -41,7 +42,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <!-- <tr>
           <td>Nancy Donnovan</td>
           <td><a href="booking.html" class="details">Details</a></td>
 
@@ -105,7 +106,7 @@
             <td>John Kell</td>
             <td><a href="booking.html" class="details">Details</a></td>
 
-          </tr>
+          </tr> -->
 
       </tbody>
       <tfoot>

@@ -203,6 +203,9 @@ body {
   margin: 0px;
   font-family: Arial, sans-serif;
   height: 100%;
+  background-color: #f9efdb;
+  display: flex;
+  flex-direction: column;
 }
 h2 {
   margin: 0px;
@@ -215,12 +218,13 @@ h2 {
   color: #333;
 }
 .flight-list {
+  flex-grow: 1;
   table {
     border-collapse: collapse;
     width: 100%;
     // max-width: 800px;
     margin: 0 auto;
-    th, td {
+    th, tbody td {
       border-bottom: 1px solid #ddd;
       padding: 8px;
       text-align: center;
