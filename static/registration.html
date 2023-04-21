@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head href="registration.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <title>My HTML page</title>
+  <script type="text/javascript" src="registration.js"></script>
+  <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+    <nav class="search-bar">
+          <ul>
+            <li><a class="logo" href="start.html">SL</a></li>
+          </ul>
+          <ul class="login-register">
+              <li><a href="login.html">Login</a></li>
+          </ul>
+      </nav>
+  <div class="main">
+    <div class="reg-box">
+        <h1>Register</h1>
+        <form onsubmit="return registration()">
+          <label for="name">First name</label>
+          <input type="text" id="name" name="name" value ="test" required>
+          <label for="surname">Last name</label>
+          <input type="text" id="surname" name="surname" value ="test" required>
+          <label for="email">Emaiil</label>
+          <input type="email" id="email" name="email"value ="tast@gamil.com" required>
+          <label for="country">Country</label>
+          <input type="text" id="country" name="country" value ="test" required>
+          <label for="date_of_birth">Date of birth</label>
+          <input type="date" id="date-of-birth" name="date_of_birth" required>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" value ="12345" required>
+          <label for="passport_number" name="passport_number">Passport number</label>
+          <input type="text" id="passport_number" name="passport_number" value ="12test" required>
+          <input type="hidden" id="role" name="role" value="manager">
+          <button type="submit">Register</button>
+        </form>
+    </div>
+
+  </div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="contact-us">
+          <h4>Contact Us</h4>
+          <p>123 Main Street, Anytown USA, (555) 555-5555, <a href="mailto:info@sl.com">info@sl.com</a></p>
+          <!-- <ul>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, Anytown USA</li>
+            <li><i class="fas fa-phone"></i> (555) 555-5555</li>
+            <li><i class="fas fa-envelope"></i> info@sl.com</li>
+          </ul> -->
+        </div>
+        <div class="follow-us">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="#"><i>facebook</i></a></li>
+            <li><a href="#"><i>instagram</i></a></li>
+            <li><a href="#"><i>twitter</i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <p>&copy; 2023 Silver Lining. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+</body>
+</html>

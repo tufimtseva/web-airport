@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="edit-profile.css">
+</head>
+<body>
+  <nav class="search-bar">
+    <ul>
+        <li><a class="logo" href="main.html">SL</a></li>
+        <!-- <li><a class="logo">Filter</a></li> -->
+        <li><a class="logo">Menu</a>
+            <ul>
+                <li><a href="flight_list.html">Flights</a></li>
+                <li><a href="boarding_check_list.html">Boarding checks</a></li>
+                <li><a href="user_list.html">Clients</a></li>
+                <li><a href="manager_list.html">Managers</a></li>
+              </ul>
+        </li>
+    </ul>
+    
+    <form action="#">
+      <input type="text" placeholder="Search..." size="1">
+      <button class="go-button" type="submit">Go</button>
+    </form>
+    <ul class="login-register">
+        <li><a href="manager_profile.html"><img src="user.svg"></a></li>
+        
+    </ul>
+
+</nav>
+<div class="main">
+  <div class="edit-profile-container">
+    <h1 class="edit-profile-title">Edit Profile</h1>
+    <form class="edit-profile-form">
+      <div class="edit-profile-form-group">
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" name="full-name" value="John Doe">
+      </div>
+      <div class="edit-profile-form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" value="johndoe@example.com">
+      </div>
+      <div class="edit-profile-form-group">
+        <label for="country">Country</label>
+        <input type="country" id="country" name="country" value="Ukraine">
+      </div>
+      <div class="edit-profile-form-group">
+        <label for="date-of-birth">Date of Birth</label>
+        <input type="date" id="date-of-birth" name="date-of-birth" value="1990-01-01">
+      </div>
+      <div class="edit-profile-form-group">
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>>
+        </select>
+      </div>
+      <div class="edit-profile-form-group">
+        <button type="submit" class="save-changes-button">Save Changes</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="contact-us">
+          <h4>Contact Us</h4>
+          <p>123 Main Street, Anytown USA, (555) 555-5555, <a href="mailto:info@sl.com">info@sl.com</a></p>
+        </div>
+        <div class="follow-us">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="#"><i>facebook</i></a></li>
+            <li><a href="#"><i>instagram</i></a></li>
+            <li><a href="#"><i>twitter</i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <p>&copy; 2023 Silver Lining. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+</body>
+</html>

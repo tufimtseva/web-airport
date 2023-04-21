@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Passenger Profile</title>
+  <script type="text/javascript" src="flight.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="flight.css">
+</head>
+<body>
+  <nav class="search-bar">
+    <ul>
+        <li><a class="logo" href="main.html">SL</a></li>
+        <!-- <li><a class="logo">Filter</a></li> -->
+        <li><a class="logo">Menu</a>
+            <ul>
+                <li><a href="flight_list.html">Flights</a></li>
+                <li><a href="boarding_check_list.html">Boarding checks</a></li>
+                <li><a href="user_list.html">Clients</a></li>
+                <li><a href="manager_list.html">Managers</a></li>
+              </ul>
+        </li>
+    </ul>
+    
+    <form action="#">
+      <input type="text" placeholder="Search..." size="1">
+      <button class="go-button" type="submit">Go</button>
+    </form>
+    <ul class="login-register">
+        <li><a href="manager_profile.html"><img src="user.svg"></a></li>
+        
+    </ul>
+
+</nav>
+<div class="main">
+  <div class="profile-container">
+    <div class="profile-header">
+      <!-- <img class="profile-avatar" src="avatar.jpg" alt="Passenger Avatar"> -->
+      <h1 class="profile-name">Flight info</h1>
+    </div>
+    <div class="profile-details">
+      <table>
+        <tbody>
+          <tr>
+            <td><strong>Number:</strong></td>
+            <td id="number" class="value">LH1234</td>
+          </tr>
+          <tr>
+            <td><strong>Departure city:</strong></td>
+            <td id="departure_city"class="value">Lviv</td>
+          </tr>
+          <tr>
+            <td><strong>Arrival city:</strong></td>
+            <td id="arrival_city" class="value">London</td>
+          </tr>
+          <tr>
+            <td><strong>Departure time:</strong></td>
+            <td id="departure_time" class="value">2023-07-21 15:30</td>
+          </tr>
+          <tr>
+            <td><strong>Arrival time:</strong></td>
+            <td id="arrival_time" class="value">2023-07-21 20:00</td>
+          </tr>
+          <tr>
+            <td><strong>Status:</strong></td>
+            <td id="status" class="value">Planned</td>
+          </tr>
+          <tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="contact-us">
+          <h4>Contact Us</h4>
+          <p>123 Main Street, Anytown USA, (555) 555-5555, <a href="mailto:info@sl.com">info@sl.com</a></p>
+          <!-- <ul>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, Anytown USA</li>
+            <li><i class="fas fa-phone"></i> (555) 555-5555</li>
+            <li><i class="fas fa-envelope"></i> info@sl.com</li>
+          </ul> -->
+        </div>
+        <div class="follow-us">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="#"><i>facebook</i></a></li>
+            <li><a href="#"><i>instagram</i></a></li>
+            <li><a href="#"><i>twitter</i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <p>&copy; 2023 Silver Lining. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+</body>
+</html>
