@@ -1,0 +1,182 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+#root{
+    height: 100%;
+}
+.main {
+  background-image: url("https://klike.net/uploads/posts/2019-11/1573724735_11.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  color: #333;
+}
+
+.greeting {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+html {
+  height: 100%;
+}
+
+h1 {
+  margin: 0;
+  padding-top: 25px;
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+  text-align: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 100%;
+}
+
+
+.search-bar {
+    margin: 0 auto;
+    width: 100%;
+    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    height: auto;
+    padding: 10px;
+  }
+  .search-bar form {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+  }
+  .search-bar input[type=text] {
+    padding: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    flex-grow: 1;
+    background-color: #f9efdb;
+  }
+  .search-bar ul {
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-right: auto;
+    display: inline-block;
+  }
+  .search-bar ul li {
+    position: relative;
+    float: left;
+    display: inline-block;
+  }
+  .search-bar ul li a {
+    padding: 20px;
+    display: inline-block;
+    color: #f9efdb;
+    text-decoration: none;
+    width: 100%;
+  }
+  .search-bar ul li a:hover {
+    background-color: #f9efdb;
+    color: #333;
+    transition: 0.5s;
+  }
+  .search-bar ul li ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    background: #333;
+    float: left;
+  }
+  .search-bar ul li ul li {
+    width: 100%;
+    margin-left: 0;
+  }
+  .search-bar ul li:hover ul {
+    display: block;
+    transition: 0.5s;
+  }
+  .search-bar .go-button {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    padding: 8px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f9efdb;
+  }
+  .search-bar .go-button:hover {
+    background-color: #333;
+    color: #f9efdb;
+    transition: 0.5s;
+  }
+  .search-bar .login-register {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .search-bar .login-register a {
+    font-size: 18px;
+    color: #f9efdb;
+    text-decoration: none;
+    padding: 8px;
+    background-color: #333;
+    border-radius: 5px;
+  }
+  .search-bar .login-register a:hover {
+    background-color: #f9efdb;
+    color: #333;
+    transition: 0.5s;
+  }
+  .search-bar .login-register img {
+    height: 40px;
+  }
+  .search-bar .logo {
+    font-size: 18px;
+    color: f9efdb;
+    text-decoration: none;
+    padding: 8px;
+    border: none;
+    background-color: #333;
+    border-radius: 5px;
+  }
+  .search-bar .logo:hover {
+    background-color: #f9efdb;
+    color: #333;
+    transition: 0.5s;
+  }
+  
+  @media (min-width: 768px) {
+    .search-bar ul li {
+      margin: 0px 20px;
+    }
+    .search-bar ul li > a:after {
+      content: " »";
+    }
+    .search-bar ul li > a:only-child:after {
+      content: "";
+    }
+  }
+  @media (max-width: 768px) {
+    .search-bar input[type=text] {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    .login-register {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+    }
+  }
