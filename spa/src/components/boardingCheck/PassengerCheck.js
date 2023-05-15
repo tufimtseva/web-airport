@@ -57,6 +57,7 @@ export const PassengerCheck = function (props) {
             const booking_id = bookingsTemp.filter(booking => booking["user_id"] == enteredUserId)[0]["id"]
             setBookingId(booking_id)
             console.log("for user id: " + enteredUserId + "found booking id: " + booking_id)
+            //var todayDate = new Date().toISOString().slice(0, 10);
         });
 
     }
@@ -70,7 +71,8 @@ export const PassengerCheck = function (props) {
                     type: checkType,
                     result: res,
                     manager_id: localStorage.getItem("id"),
-                    booking_id: bookingId
+                    booking_id: bookingId,
+                    time:  new Date().toISOString()
                 }
               ),
             headers: {

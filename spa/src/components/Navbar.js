@@ -28,13 +28,13 @@ export const Navbar = function () {
                     <Dropdown  isOpen={dropdownOpen} toggle={toggle} direction="down">
                         <DropdownToggle caret size="lg" color="primary" className="logo">Menu</DropdownToggle>
                         <DropdownMenu className="dpMenu">
-                            <DropdownItem ><Link to='/login'  >Flights</Link></DropdownItem>
+                            <DropdownItem ><Link to='/flightlist'  >Flights</Link></DropdownItem>
 
-                            <DropdownItem><Link to='/registration' >Boarding checks</Link></DropdownItem>
+                            <DropdownItem><Link to='/boardingchecklist' >Boarding checks</Link></DropdownItem>
 
-                            <DropdownItem ><Link to='/login'  >Clients</Link></DropdownItem>
+                            <DropdownItem ><Link to='/clientlist'  >Clients</Link></DropdownItem>
 
-                            <DropdownItem><Link to='/registration' >Managers</Link></DropdownItem>
+                            <DropdownItem><Link to='/managerlist' >Managers</Link></DropdownItem>
                         </DropdownMenu>
                     </Dropdown>
                     {/* <a class="logo">Menu</a>
@@ -83,7 +83,7 @@ export const Navbar = function () {
             default:
                 return(
                     <ul className="login-register">
-                    <li><a href="manager_profile.html"><img src="user.svg"/></a></li>
+                    <li><Link to={`/manager/${localStorage.getItem('id')}`} className="details"><img src="user.svg"/></Link></li>
                     </ul>
                 )
         }

@@ -158,6 +158,29 @@ body {
     transition: 0.5s;
   }
   
+  /* @media (min-width: 768px) {
+    .search-bar ul li {
+      margin: 0px 20px;
+    }
+    .search-bar ul li > a:after {
+      content: " »";
+    }
+    .search-bar ul li > a:only-child:after {
+      content: "";
+    }
+  }
+  @media (max-width: 768px) {
+    .search-bar input[type=text] {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    .login-register {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+    }
+  } */
+
   @media (min-width: 768px) {
     .search-bar ul li {
       margin: 0px 20px;
@@ -178,5 +201,88 @@ body {
       display: flex;
       justify-content: space-between;
       margin: 0;
+    }
+  }
+
+
+  /* body {
+    margin: 0px;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background-color: #f9efdb;
+    display: flex;
+    flex-direction: column;
+  } */
+  
+  h2 {
+    margin: 0px;
+  }
+
+  .heading {
+    background-color: #f9efdb;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    color: #333;
+  }
+  
+  .flight-list {
+    flex-grow: 1;
+  }
+  .flight-list table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .flight-list table th, .flight-list table tbody td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .flight-list table th {
+    background-color: #f9efdb;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+  }
+  .flight-list table tbody {
+    background-color: #522222;
+    color: #f9efdb;
+  }
+  .flight-list table tbody tr {
+    text-align: center;
+  }
+  .flight-list table tbody tr .details {
+    color: #f9efdb;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .flight-list table tbody tr .details:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+  }
+  .flight-list table tfoot {
+    background-color: #f9efdb;
+  }
+  .flight-list table .last-row {
+    height: 50px;
+    background-color: #f9efdb;
+  }
+  @media screen and (max-width: 600px) {
+    .flight-list table {
+      font-size: 14px;
+    }
+    .flight-list table th, .flight-list table td {
+      padding: 6px;
+    }
+    .flight-list table td:last-child button {
+      padding: 6px 12px;
     }
   }
