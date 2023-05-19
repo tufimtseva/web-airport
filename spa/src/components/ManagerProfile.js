@@ -61,7 +61,7 @@ export const ManagerProfile = function (props) {
                     </table>
                     {localStorage.getItem('id') == managerData['id'] ?
                     <>
-                       <a href="edit_profile.html">Edit profile</a>
+                       <Link to={`/editprofile/${managerData['id']}`}>Edit profile</Link>
                        <div className="logout"> <Link to="/" onClick={() => localStorage.clear()}>Logout</Link></div>
                        </>
                         :

@@ -18,6 +18,7 @@ import { Flight } from './components/Flight';
 import { ManagerProfile } from './components/ManagerProfile'
 import { UserProfile } from './components/UserProfile';
 import { Authorized } from './components/Authorized';
+import { EditProfile } from './components/EditProfile';
 import reportWebVitals from './reportWebVitals';
  
 // import styles from './styles.css';
@@ -45,6 +46,7 @@ root.render(
       <Route path='/flight/:flightId' element={<Authorized><Flight/></Authorized>}/>
       <Route path='/manager/:managerId' element={<Authorized><ManagerProfile/></Authorized>}/>
       <Route path='/user/:userId' element={<Authorized><UserProfile/></Authorized>}/>
+      <Route path='/editprofile/:managerId' element={<Authorized><EditProfile/></Authorized>}/>
      
     </Routes>
    </div>

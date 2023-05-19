@@ -42,6 +42,7 @@
         width: 100%;
         display: flex;
         justify-content: center;
+        height: 100%;
     }
 
 
@@ -409,6 +410,7 @@ body {
 }
 
 .box {
+  
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1025,6 +1027,68 @@ footer {
           }
           .danger {
               color: red;
+          }
+
+
+
+
+          .edit-profile-container {
+            width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            background-color: #f9efdb;
+            border-width: 5px;
+            border-color: #333;
+          }
+          
+          .edit-profile-title {
+            font-size: 32px;
+            color: $primary-color;
+            margin-bottom: 30px;
+          }
+          
+          .edit-profile-form-group {
+            margin-bottom: 20px;
+          }
+          
+          label {
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+            color: $primary-color;
+            margin-bottom: 5px;
+          }
+          
+          // input[type="text"],
+          // input[type="email"],
+          // input[type="country"],
+          // input[type="date"],
+          // input {
+          //     background-color: #f9efdb;
+          // }
+          select {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            background-color: #f9efdb;
+          
+          }
+          
+          .save-changes-button {
+            color: #f9efdb;
+              background-color: #333;
+              border-radius: 8px;
+              height: 40px;
+              font-size: 16px;
           }
           
           
