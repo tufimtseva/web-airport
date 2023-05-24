@@ -5,7 +5,7 @@ import { useParams, useSearchParams, Link } from "react-router-dom";
 export const ManagerProfile = function (props) {
     //const formType = 'customProfile';
     const { managerId } = useParams();
-    const [managerData, setManagerdata] = useState([]);
+    const [managerData, setManagerdata] = useState(null);
     let encodedCredentials = btoa(localStorage.getItem('email') + ':' + localStorage.getItem('password'));
 
     useEffect(() => {
@@ -28,12 +28,15 @@ export const ManagerProfile = function (props) {
         <div className='main-details'>
             <div class="profile-container">
                 <div class="profile-header">
-                    <h1 id="global_name" class="profile-name">{managerData["name"] + " " + managerData["surname"]}</h1>
+                {managerData !== null ? <h1 id="global_name" class="profile-name">{managerData["name"] + " " + managerData["surname"]}</h1> : <></>}
+                    
                 </div>
                 <div class="profile-details">
                     <h2 class="profile-section-title">Personal Information</h2>
                     <table>
                         <tbody>
+                            {managerData !== null ?
+                            <>
                             <tr>
                                 <td><strong>Full Name:</strong></td>
                                 <td id="full_name" class="value">{managerData["name"] + " " + managerData["surname"]}</td>
@@ -57,9 +60,17 @@ export const ManagerProfile = function (props) {
                             <tr>
 
                             </tr>
+                            
+                            </>
+                            : <></>
+                        
+                        
+                        }
+                            
                         </tbody>
                     </table>
-                    {localStorage.getItem('id') == managerData['id'] ?
+                    {
+                    managerData !== null &&  localStorage.getItem('id') == managerData['id'] ?
                     <>
                        <Link to={`/editprofile/${managerData['id']}`}>Edit profile</Link>
                        <div className="logout"> <Link to="/" onClick={() => localStorage.clear()}>Logout</Link></div>
@@ -68,6 +79,7 @@ export const ManagerProfile = function (props) {
 
                     
                             <></>
+                    
                            
                       
                     }

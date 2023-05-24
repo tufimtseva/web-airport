@@ -25,10 +25,7 @@ export const PassengerCheck = function (props) {
             )
             .then(response => response.json())
             .then(jsonResponse => {
-                jsonResponse.map(user => {
-                    usersTemp.push(user)
-                })
-                setUsers(usersTemp)
+                setUsers(jsonResponse);
             });
         }
 
@@ -87,20 +84,20 @@ export const PassengerCheck = function (props) {
 
        
     return (
-        <div className="box">
+        <div className="box" data-testid="passenger-check">
         <div className="select-passenger"> 
           <p className="text">Select a passenger</p>
           <Input type="text" placeholder="Name" onChange={e => setName(e.target.value)}/>
           <Input type="text" placeholder="Surname" onChange={e => setSurname(e.target.value)}/>
-          <Input type="text" placeholder="Passport number" onChange={e => setPassportNumber(e.target.value)}/>
+          <Input type="text" disabled={users.length == 0} placeholder="Passport number" onChange={e => setPassportNumber(e.target.value)}/>
         </div>
-        <Button disabled={flightId == -1 || passportNumber == '' || users.length == 0} onClick={e => findUserAndBooking(passportNumber)} className="set-button">Search</Button>
+        <Button data-testid="search" disabled={flightId == -1 || passportNumber == '' || users.length == 0} onClick={e => findUserAndBooking(passportNumber)} className="set-button">Search</Button>
 
         {/* <a href="profile.html"><i>Go to passenger's profile</i></a> */}
-        <Button  className="set-button"><i>Go to passenger's profile</i></Button>
+        {/* <Button  className="set-button"><i>Go to passenger's profile</i></Button> */}
         {/* <a href="booking.html"><i>See passenger's booking</i></a> */}
-        <Button  className="set-button"><i>See passenger's booking</i></Button>
-        <Input type="select" className="dropdown" onChange={e => setCheckType(e.target.value)}>
+        {/* <Button  className="set-button"><i>See passenger's booking</i></Button> */}
+        <Input type="select" data-testid="check-type-selector" className="dropdown" onChange={e => setCheckType(parseInt(e.target.value))}>
             <option value={-1}>Check type</option>
               <option value={1}>Passport check</option>
               <option value={2}>Baggage check</option>

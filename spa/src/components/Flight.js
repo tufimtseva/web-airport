@@ -5,7 +5,7 @@ import { useParams, useSearchParams, Link } from "react-router-dom";
 export const Flight = function () {
     const { flightId } = useParams();
     const [flightStatus, setFlightStatus] = useState("")
-    const [flightData, setFlightData] = useState([]);
+    const [flightData, setFlightData] = useState(null);
 
     let encodedCredentials = btoa(localStorage.getItem('email') + ':' + localStorage.getItem('password'));
     useEffect(() => {
@@ -59,6 +59,9 @@ export const Flight = function () {
                 <div class="profile-details">
                     <table>
                         <tbody>
+                            
+                            {flightData !== null ? 
+                            <>
                             <tr>
                                 <td><strong>Number:</strong></td>
                                 <td id="number" class="value">{flightData["number"]}</td>
@@ -83,6 +86,8 @@ export const Flight = function () {
                                 <td><strong>Status:</strong></td>
                                 <td id="status" class="value">{flightStatus}</td>
                             </tr>
+                            </>
+: <></>}
 
                         </tbody>
                     </table>

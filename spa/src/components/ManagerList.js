@@ -16,10 +16,8 @@ export const ManagerList = function () {
         })
             .then(response => response.json())
             .then(jsonResponse => {
-                jsonResponse.map(user => {
-                    managersTemp.push(user)
-                })
-                setManagers(managersTemp);
+            
+                setManagers(jsonResponse);
             });
 
     }, [])
@@ -43,7 +41,7 @@ export const ManagerList = function () {
       </header>
       <div className="manager-list">
     
-        <div class="users-container">
+        <div data-testid="container" class="users-container">
         {managers.map(manager => renderManager(manager, `https://randomuser.me/api/portraits/women/${manager["id"]}.jpg`))}
           
           </div>

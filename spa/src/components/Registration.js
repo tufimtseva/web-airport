@@ -161,37 +161,37 @@ export const Registration = function() {
             <h1>Register</h1>
             <Form classNameName="form_login_reg">
                 <FormGroup>
-                    <Label className="label_login_reg">FirstName</Label>
-                    <Input onChange={e=>nameHandler(e)} type="text" className="input_login_reg" placeholder = "First name" name="name" required  invalid={errorName !== ''}/>
+                    <Label htmlFor="firstName"className="label_login_reg">FirstName</Label>
+                    <Input id="firstName"onChange={e=>nameHandler(e)} type="text" className="input_login_reg" placeholder = "First name" name="name" required  invalid={errorName !== ''}/>
                     <FormFeedback>{errorName}</FormFeedback>
                 </FormGroup>
                 <FormGroup>
-                    <Label className="label_login_reg">LastName</Label>
-                    <Input onChange={e=>surnameHandler(e)} type="text" className="input_login_reg" placeholder = "Last name" name="surname" required  invalid={errorSurname !== ''}/>
+                    <Label htmlFor="lastName" className="label_login_reg">LastName</Label>
+                    <Input id="lastName" onChange={e=>surnameHandler(e)} type="text" className="input_login_reg" placeholder = "Last name" name="surname" required  invalid={errorSurname !== ''}/>
                     <FormFeedback>{errorSurname}</FormFeedback>
                 </FormGroup>
                 <FormGroup>
-                    <Label className="label_login_reg">Email</Label>
-                    <Input onChange={e=>emailHandler(e)} type="text" className="input_login_reg" placeholder = "Email" name="email" required  invalid={errorEmail !== ''}/>
+                    <Label htmlFor="email" className="label_login_reg">Email</Label>
+                    <Input id="email"onChange={e=>emailHandler(e)} type="text" className="input_login_reg" placeholder = "Email" name="email" required  invalid={errorEmail !== ''}/>
                     <FormFeedback>{errorEmail}</FormFeedback>
                 </FormGroup>
                 <FormGroup>
-                    <Label className="label_login_reg">Country</Label>
-                    <Input onChange={e=>countryHandler(e)} type="text" className="input_login_reg" placeholder = "Country" name="country" required  invalid={errorCountry !== ''}/>
+                    <Label htmlFor="country" className="label_login_reg">Country</Label>
+                    <Input id = "country" onChange={e=>countryHandler(e)} type="text" className="input_login_reg" placeholder = "Country" name="country" required  invalid={errorCountry !== ''}/>
                     <FormFeedback>{errorCountry}</FormFeedback>
                 </FormGroup>
                 <FormGroup>
-                <Label className="label_login_reg">Birth date</Label>
-                <Input type = 'date' onChange = {e=>setDateOfBirth(e.target.value)} className="input_login_reg" name = 'dateOfBirth' placeholder = 'Pick your birth date...' required />
+                <Label htmlFor="birthDate" className="label_login_reg">Birth date</Label>
+                <Input id="birthDate" type = 'date' onChange = {e=>setDateOfBirth(e.target.value)} className="input_login_reg" name = 'dateOfBirth' placeholder = 'Pick your birth date...' required />
                 </FormGroup>
                 <FormGroup >
-                    <Label className="label_login_reg">Password</Label>
-                    <Input onChange={e=>passwordHandler(e)}  type="password" className="input_login_reg" placeholder = "Password" name="password" required invalid={errorPassword !== ''}/>
+                    <Label htmlFor="password" className="label_login_reg">Password</Label>
+                    <Input id="password" onChange={e=>passwordHandler(e)}  type="password" className="input_login_reg" placeholder = "Password" name="password" required invalid={errorPassword !== ''}/>
                     <FormFeedback>{errorPassword}</FormFeedback>
                 </FormGroup>
                 <FormGroup>
-                    <Label className="label_login_reg">Passport number</Label>
-                    <Input onChange={e=>passportNumberHandler(e)} type="text" className="input_login_reg" placeholder = "Passport number" name="passportNumber" required  invalid={errorPassportNumber !== ''}/>
+                    <Label htmlFor="passportNumber" className="label_login_reg">Passport number</Label>
+                    <Input id="passportNumber" onChange={e=>passportNumberHandler(e)} type="text" className="input_login_reg" placeholder = "Passport number" name="passportNumber" required  invalid={errorPassportNumber !== ''}/>
                     <FormFeedback>{errorPassportNumber}</FormFeedback>
                 </FormGroup>
                 <div>

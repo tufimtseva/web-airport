@@ -1,9 +1,9 @@
 import { Navigate } from "react-router-dom";
-import { Utils } from '../classes/Utils'
 
-export const Authorized = function({ children }) {
+
+export const Authorized = function({ children, redirectPath }) {
     const isLoggedIn = () => {
         return (localStorage.getItem('email')  ? true : false);
     }
-    return isLoggedIn() ? children : <Navigate to="/" replace/>;
+    return isLoggedIn() ? children : <Navigate to={redirectPath} replace/>;
 }

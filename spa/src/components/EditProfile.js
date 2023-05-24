@@ -192,37 +192,37 @@ export const EditProfile = function () {
             <h1 class="edit-profile-title">Edit Profile</h1>
             <Form class="edit-profile-form">
                 <FormGroup class="edit-profile-form-group">
-                    <Label for="full-name">First Name</Label>
-                    <Input type="text" onChange={e => nameHandler(e)} name="full-name" defaultValue={managerData["name"]} required invalid={errorName !== ''} />
+                    <Label htmlFor="first-name">First Name</Label>
+                    <Input id="first-name" type="text" onChange={e => nameHandler(e)} name="full-name" defaultValue={managerData["name"]} required invalid={errorName !== ''} />
                     <FormFeedback>{errorName}</FormFeedback>
                 </FormGroup>
                 <FormGroup class="edit-profile-form-group">
-                    <Label for="full-name">Last Name</Label>
-                    <Input type="text" onChange={e => surnameHandler(e)} name="full-name" defaultValue={managerData["surname"]} required invalid={errorSurname !== ''} />
+                    <Label htmlFor="last-name">Last Name</Label>
+                    <Input id="last-name" type="text" onChange={e => surnameHandler(e)} name="full-name" defaultValue={managerData["surname"]} required invalid={errorSurname !== ''} />
                     <FormFeedback>{errorSurname}</FormFeedback>
                 </FormGroup>
                 <FormGroup class="edit-profile-form-group">
-                    <Label for="email">Email</Label>
-                    <Input type="email" onChange={e => emailHandler(e)} id="email" name="email" defaultValue={managerData["email"]} required invalid={errorEmail !== ''} />
+                    <Label htmlFor="email">Email</Label>
+                    <Input id="email" type="email" onChange={e => emailHandler(e)}  name="email" defaultValue={managerData["email"]} required invalid={errorEmail !== ''} />
                     <FormFeedback>{errorEmail}</FormFeedback>
                 </FormGroup>
                 <FormGroup >
-                    <Label >Password</Label>
-                    <Input onChange={e => passwordHandler(e)} type="password" placeholder="Password" name="password" required invalid={errorPassword !== ''} />
+                    <Label htmlFor="password">Password</Label>
+                    <Input  id="password" onChange={e => passwordHandler(e)} type="password" placeholder="Password" name="password" required invalid={errorPassword !== ''} />
                     <FormFeedback>{errorPassword}</FormFeedback>
                 </FormGroup>
                 <FormGroup class="edit-profile-form-group">
-                    <Label for="country">Country</Label>
-                    <Input type="text" onChange={e => countryHandler(e)} id="country" name="country" defaultValue={managerData["country"]} invalid={errorCountry !== ''} />
+                    <Label htmlFor="country">Country</Label>
+                    <Input id="country" type="text" onChange={e => countryHandler(e)}  name="country" defaultValue={managerData["country"]} invalid={errorCountry !== ''} />
                     <FormFeedback>{errorCountry}</FormFeedback>
                 </FormGroup>
                 <FormGroup class="edit-profile-form-group">
-                    <Label for="date-of-birth">Date of Birth</Label>
-                    <Input type="date" onChange={e => setDateOfBirth(e.target.value)} id="date-of-birth" name="date-of-birth" defaultValue={managerData["date_of_birth"]} required />
+                    <Label htmlFor="date-of-birth">Date of Birth</Label>
+                    <Input id="date-of-birth" type="date" onChange={e => setDateOfBirth(e.target.value)} name="date-of-birth" defaultValue={managerData["date_of_birth"]} required />
                 </FormGroup>
                 <FormGroup class="edit-profile-form-group">
-                    <Label for="country">Passport number</Label>
-                    <Input type="text" onChange={e => passportNumberHandler(e)} id="country" name="country" defaultValue={managerData["passport_number"]} required invalid={errorPassportNumber !== ''} />
+                    <Label htmlFor="passport-number">Passport number</Label>
+                    <Input id="passport-number" type="text" onChange={e => passportNumberHandler(e)}  name="country" defaultValue={managerData["passport_number"]} required invalid={errorPassportNumber !== ''} />
                     <FormFeedback>{errorPassportNumber}</FormFeedback>
                 </FormGroup>
                 <div class="edit-profile-form-group">

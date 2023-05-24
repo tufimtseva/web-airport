@@ -43,7 +43,7 @@ export const ClientList = function () {
                             <th>Details</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody data-testid="table-body-client">
                         {clients.map(client => drawARaw(client))}
                     </tbody>
                     <tfoot>

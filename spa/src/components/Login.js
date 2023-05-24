@@ -102,13 +102,13 @@ export const Login = function() {
             <h1>Login</h1>
             <Form className="form_login_reg">
                 <FormGroup>
-                    <Label className="label_login_reg">Username</Label>
-                    <Input onChange={e=>emailHandler(e)} type="text" className="input_login_reg" placeholder = "Email" name="email" required  invalid={errorEmail !== ''}/>
+                    <Label htmlFor="username" className="label_login_reg">Username</Label>
+                    <Input id="username" onChange={e=>emailHandler(e)} type="text" className="input_login_reg" placeholder = "Email" name="email" required  invalid={errorEmail !== ''}/>
                     <FormFeedback >{errorEmail}</FormFeedback>
                 </FormGroup>
                 <FormGroup >
-                    <Label className="label_login_reg">Password</Label>
-                    <Input onChange={e=>passwordHandler(e)}  type="password" className="input_login_reg" placeholder = "Password" name="password" required invalid={errorPassword !== ''}/>
+                    <Label htmlFor="password" className="label_login_reg">Password</Label>
+                    <Input id="password" onChange={e=>passwordHandler(e)}  type="password" className="input_login_reg" placeholder = "Password" name="password" required invalid={errorPassword !== ''}/>
                     <FormFeedback >{errorPassword}</FormFeedback>
                     
                 </FormGroup>

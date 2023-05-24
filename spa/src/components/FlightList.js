@@ -9,10 +9,9 @@ export const FlightList = function () {
     fetch('http://localhost:5000/flight')
       .then(response => response.json())
       .then(jsonResponse => {
-        jsonResponse.map(flight => {
-          flightsTemp.push(flight)
-        })
-        setFlights(flightsTemp);
+
+        // setFlights1(['q','z','a']);
+        setFlights(jsonResponse);
 
       });
 
@@ -65,8 +64,9 @@ export const FlightList = function () {
 
             </tr>
           </thead>
-          <tbody>
-            {flights.map(flight => drawARaw(flight))}
+          <tbody data-testid="table-body">
+            {/* {flights1.map(e => <tr><td><span>{e}</span></td></tr>)} */}
+            {flights.length > 0 ? flights.map(flight => drawARaw(flight)) : <></>}
           </tbody>
           <tfoot>
             <tr>

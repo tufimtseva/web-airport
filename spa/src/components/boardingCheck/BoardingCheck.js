@@ -9,9 +9,9 @@ export const Boardingcheck = function() {
     useEffect(() => {console.log("flight id: " + flightId)}, [flightId]) 
     useEffect(() => {console.log("flight status: " + flightStatus)}, [flightStatus])
     return(
-        <div className="container-dropdown">
+        <div data-testid="yyy" className="container-dropdown">
             <FlightNumberSelector setFlightId={setFlightId} setFlightStatus={setFlightStatus}/>
-            <FlightStatusSetter flightId={flightId} flightStatus={flightStatus}/>
+            <FlightStatusSetter data-testid="flight-status-setter123" flightId={flightId} flightStatus={flightStatus}/>
             <PassengerCheck flightId={flightId}/>
         </div>
     );

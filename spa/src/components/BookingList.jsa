@@ -3,6 +3,10 @@ import { Table } from 'reactstrap';
 import { useState, useEffect } from "react"
 import { useParams, useSearchParams, Link } from "react-router-dom";
 export const BookingList = function () {
+    return <></>
+}
+/*
+export const BookingList = function () {
     const [bookingData, setBookingData] = useState([]);
     const [fullnmaes, setFullNames] = useState([]);
     const [flightNumber, setFlightNumber] = useState(-1);
@@ -144,66 +148,7 @@ export const BookingList = function () {
                     </thead>
                     <tbody>
                         {bookingData.map(booking => drawARow(booking))}
-                        {/* <tr>
-                            <td>Kate Lorrain</td>
-                            <td><a href="booking.html" class="details">Details</a></td>
 
-                        </tr>
-                        <tr>
-                            <td>John Kell</td>
-                            <td><a href="booking.html" class="details">Details</a></td>
-
-                        </tr>
-                        <tr>
-                            <td>Rick Mill</td>
-                            <td><a href="booking.html" class="details">Details</a></td>
-
-                        </tr>
-                        <tr>
-                            <td>John Kell</td>
-                            <td><a href="booking.html" class="details">Details</a></td>
-
-                        </tr>
-                        <tr>
-                            <td>John Kell</td>
-                            <td><a href="booking.html" class="details">Details</a></td>
-
-                        </tr>
-                        <tr>
-                            <td>John Kell</td>
-                            <td><a href="booking.html" class="details">Details</a></td>
-
-                        </tr>
-                        <tr>
-                            <td>John Kell</td>
-                            <td><a href="booking.html" class="details">Details</a></td>
-
-                        </tr>
-                        <tr>
-                            <td>John Kell</td>
-                            <td><a href="booking.html" class="details">Details</a></td>
-
-                        </tr>
-                        <tr>
-                            <td>John Kell</td>
-                            <td><a href="booking.html" class="details">Details</a></td>
-
-                        </tr>
-                        <tr>
-                            <td>John Kell</td>
-                            <td><a href="booking.html" class="details">Details</a></td>
-
-                        </tr>
-                        <tr>
-                            <td>John Kell</td>
-                            <td><a href="booking.html" class="details">Details</a></td>
-
-                        </tr>
-                        <tr>
-                            <td>John Kell</td>
-                            <td><a href="booking.html" class="details">Details</a></td>
-
-                        </tr> */}
 
                     </tbody>
                     <tfoot>
@@ -218,3 +163,4 @@ export const BookingList = function () {
         </>
     )
 }
+*/

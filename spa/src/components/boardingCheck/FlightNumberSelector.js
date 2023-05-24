@@ -10,26 +10,22 @@ export const FlightNumberSelector = function (props) {
         fetch('http://localhost:5000/flight')
             .then(response => response.json())
             .then(jsonResponse => {
-                jsonResponse.map(flight => {
-                    flightsTemp.push(flight)
-                })
-                setFlights(flightsTemp);
-            });
-        
+                setFlights(jsonResponse);
+            }); 
     }, [])
 
     const handleSelection = (e) => {
-        setFlightId(e.target.value)
+        setFlightId(parseInt(e.target.value))
         const status = flights.filter(flight => flight["id"] == e.target.value)[0]["status"];
         setFlightStatus(status);
     }
 
     const displayFlightNumbers = (flights) => {
-        return <Input type="select" onChange={e => handleSelection(e)} className="dropdown">
+        return <Input data-testid="flight-number-selector-dropdown" type="select" onChange={e => handleSelection(e)} className="dropdown">
             <option value={-1}>Flight number</option>
             {
                 flights.map(
-                    flight => <option value={flight["id"]}>{flight["number"]}</option>
+                    flight => <option  value={flight["id"]}>{flight["number"]}</option>
                 )
             }
 
@@ -37,7 +33,7 @@ export const FlightNumberSelector = function (props) {
     }
 
     return (
-        <div className="box">
+        <div className="box" data-testid="flight-number-selector">
             <p className="text">Select flight</p>
             {displayFlightNumbers(flights)}
             <Button  className="set-button"><i>See all bookings</i></Button>

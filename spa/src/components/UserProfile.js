@@ -27,13 +27,17 @@ export const UserProfile = function () {
     return (
         <div class="profile-container">
         <div class="profile-header">
-          <h1 class="profile-name">{userData["name"] + " " + userData["surname"]}</h1>
+        {userData !== null ? <h1 id="global_name" class="profile-name">{userData["name"] + " " + userData["surname"]}</h1> : <></>}
+
+          
         </div>
         <div class="profile-details">
           <h2 class="profile-section-title">Personal Information</h2>
           <table>
             <tbody>
-              <tr>
+            {userData !== null ?
+            <>
+                          <tr>
                 <td><strong>Full Name:</strong></td>
                 <td class="value">{userData["name"] + " " + userData["surname"]}</td>
               </tr>
@@ -49,6 +53,11 @@ export const UserProfile = function () {
                 <td><strong>Date of Birth:</strong></td>
                 <td class="value">{userData["date_of_birth"]}</td>
               </tr>
+            
+            </> :
+            <></>
+          }
+
               {/* <tr>
                 <td><strong>Gender:</strong></td>
                 <td class="value">Male</td>
