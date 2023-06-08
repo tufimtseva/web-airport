@@ -42,11 +42,6 @@ window.onload = function() {
                 const dateOfBirthElm = document.getElementById("date_of_birth");
                 dateOfBirthElm.innerHTML = jsonResponse["date_of_birth"];
 
-                // let email = jsonResponse["email"];
-                // console.log(email)
-                // localStorage.setItem("email", email);
-                // localStorage.setItem("password", password);
-                // window.location.href = "main.html"
               }
             })
             .catch(e => {
