@@ -3,11 +3,7 @@ import { Table } from 'reactstrap';
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom";
 
-export const BoardingCheckList = function () {
-  return <></>;
-}
 
-/*
 export const BoardingCheckList = function () {
     const [boardingChecks, setBoardingChecks] = useState([]);
     //const [passengerId, setPassengerId] = useState(-1);
@@ -112,4 +108,3 @@ export const BoardingCheckList = function () {
     )
 
 }
-*/

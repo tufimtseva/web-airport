@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, fireEvent, waitFor, act, screen } from '@testing-library/react';
 import { FlightNumberSelector } from '../components/boardingCheck/FlightNumberSelector'
+import { MemoryRouter } from 'react-router-dom';
 
 describe('FlightNumberSelector', () => {
   it('should render the component correctly', () => {
@@ -8,12 +9,12 @@ describe('FlightNumberSelector', () => {
     const setFlightStatus = jest.fn();
 
     const { getByText, getByTestId } = render(
-      <FlightNumberSelector setFlightId={setFlightId} setFlightStatus={setFlightStatus} />
+      <MemoryRouter><FlightNumberSelector setFlightId={setFlightId} setFlightStatus={setFlightStatus} /></MemoryRouter>
     );
 
     expect(getByText('Select flight')).toBeInTheDocument();
     expect(getByTestId('flight-number-selector-dropdown')).toBeInTheDocument();
-    expect(getByText('See all bookings')).toBeInTheDocument();
+    expect(getByText('Get a report')).toBeInTheDocument();
   });
 
   it('should set the flight ID and status correctly on selection', async () => {
@@ -55,7 +56,7 @@ describe('FlightNumberSelector', () => {
     );
 
     render(
-      <FlightNumberSelector setFlightId={setFlightId} setFlightStatus={setFlightStatus} />
+      <MemoryRouter><FlightNumberSelector setFlightId={setFlightId} setFlightStatus={setFlightStatus} /></MemoryRouter>
     );
 
     const selectElement = screen.getByTestId('flight-number-selector-dropdown');

@@ -19,9 +19,9 @@ import { ManagerProfile } from './components/ManagerProfile'
 import { UserProfile } from './components/UserProfile';
 import { Authorized } from './components/Authorized';
 import { EditProfile } from './components/EditProfile';
+import { Report } from './components/Report.js';
 import reportWebVitals from './reportWebVitals';
- 
-// import styles from './styles.css';
+
 import styles from './styles.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -47,7 +47,8 @@ root.render(
       <Route path='/manager/:managerId' element={<Authorized redirectPath="/"><ManagerProfile/></Authorized>}/>
       <Route path='/user/:userId' element={<Authorized redirectPath="/"><UserProfile/></Authorized>}/>
       <Route path='/editprofile/:managerId' element={<Authorized redirectPath="/"><EditProfile/></Authorized>}/>
-     
+      <Route path='/report/:flightId' element={<Authorized redirectPath="/"><Report/></Authorized>}/>
+
     </Routes>
    </div>
    <Footer/>

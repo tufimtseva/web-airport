@@ -3,11 +3,7 @@ import { Table } from 'reactstrap';
 import { useState, useEffect } from "react"
 import { useParams, useSearchParams, Link } from "react-router-dom";
 
-export const Booking = function() {
-  return <></>;
-}
 
-/*
 export const Booking = function() {
     const {bookingId} = useParams();
     const [flightNumber, setFlightNumber] = useState(-1);
@@ -96,4 +92,3 @@ export const Booking = function() {
       </div>
     )
 }
-*/

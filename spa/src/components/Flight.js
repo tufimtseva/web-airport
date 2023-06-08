@@ -72,7 +72,7 @@ export const Flight = function () {
                             </tr>
                             <tr>
                                 <td><strong>Arrival city:</strong></td>
-                                <td id="arrival_city" class="value">{flightData["arrval_city"]}</td>
+                                <td id="arrival_city" class="value">{flightData["arrival_city"]}</td>
                             </tr>
                             <tr>
                                 <td><strong>Departure time:</strong></td>

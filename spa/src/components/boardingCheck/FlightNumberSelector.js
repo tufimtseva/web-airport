@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react"
 import { Button, Form, Input } from "reactstrap";
+import { useParams, useSearchParams, Link } from "react-router-dom";
 export const FlightNumberSelector = function (props) {
     //const flightId = props.flightId;
     const setFlightId = props.setFlightId;
     const [flights, setFlights] = useState([]);
+    const [reportFlightId, setReportFlightId] = useState([]);
     const setFlightStatus = props.setFlightStatus;
     useEffect(() => {
-        const flightsTemp = [];
+        
         fetch('http://localhost:5000/flight')
             .then(response => response.json())
             .then(jsonResponse => {
@@ -16,6 +18,7 @@ export const FlightNumberSelector = function (props) {
 
     const handleSelection = (e) => {
         setFlightId(parseInt(e.target.value))
+        setReportFlightId(parseInt(e.target.value))
         const status = flights.filter(flight => flight["id"] == e.target.value)[0]["status"];
         setFlightStatus(status);
     }
@@ -36,7 +39,7 @@ export const FlightNumberSelector = function (props) {
         <div className="box" data-testid="flight-number-selector">
             <p className="text">Select flight</p>
             {displayFlightNumbers(flights)}
-            <Button  className="set-button"><i>See all bookings</i></Button>
+            <Link to={`/report/${reportFlightId}`} className="set-button"><i>Get a report</i></Link>
         </div>
     );
 

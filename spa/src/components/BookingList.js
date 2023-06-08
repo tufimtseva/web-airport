@@ -2,10 +2,8 @@ import React from 'react';
 import { Table } from 'reactstrap';
 import { useState, useEffect } from "react"
 import { useParams, useSearchParams, Link } from "react-router-dom";
-export const BookingList = function () {
-    return <></>
-}
-/*
+
+
 export const BookingList = function () {
     const [bookingData, setBookingData] = useState([]);
     const [fullnmaes, setFullNames] = useState([]);
@@ -146,7 +144,7 @@ export const BookingList = function () {
 
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody data-testid="table-body">
                         {bookingData.map(booking => drawARow(booking))}
 
 
@@ -163,4 +161,4 @@ export const BookingList = function () {
         </>
     )
 }
-*/
+
